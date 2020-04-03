@@ -1,0 +1,175 @@
+.game {
+    position: relative;
+    height: 700px;
+    margin: auto 0;
+}
+
+#progressbar {
+    position: absolute;
+    top: 50%;
+    left: 44%;
+    margin: auto 0;
+    width: 300px;
+    height: 20px;
+    border: 1px solid darkgray;
+    display: block;
+    z-index: 7;
+}
+
+
+/*在进度条元素上调用动画*/
+
+#fill {
+    animation: move 2s;
+    text-align: center;
+    background-color: #6caf00;
+    display: block;
+    z-index: 6;
+}
+
+
+/*实现元素宽度的过渡动画效果*/
+
+@keyframes move {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.start {
+    position: absolute;
+    margin: auto 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 5;
+}
+
+#start {
+    position: absolute;
+    margin: auto 0;
+    height: 35px;
+    width: 100px;
+    top: 50%;
+}
+
+.btn {
+    float: left;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 7px 11px 0;
+    color: #888;
+    text-align: center;
+    /* so nobody selects the inside text on button */
+    user-select: none;
+    /* Smoothing out hover using css3 transitions, if not, the pressed button effect looks a bit hard */
+    transition: all 0.2s ease;
+}
+
+.btn-small {
+    line-height: 36px;
+    width: 78px;
+    height: 36px;
+}
+
+.submit {
+    background: #b7de01;
+    box-shadow: 0px 5px #687e00;
+    color: #687e00;
+}
+
+.submit:hover {
+    background: #99ba01;
+    box-shadow: 0px 4px #435100;
+    color: #687e00;
+}
+
+
+/* Imitate a pressed effect for buttons */
+
+.submit:active {
+    box-shadow: 0px 0px #717a33;
+    top: 4px;
+}
+
+.main {
+    margin: auto 0;
+    position: relative;
+    height: 700px;
+}
+
+h3 {
+    font-size: 40px;
+    margin: auto 0;
+    height: 60px;
+    text-align: center;
+    background-color: tan;
+    color: blanchedalmond;
+}
+
+.cankao {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin-left: 930px;
+    margin-top: 230px;
+}
+
+.gameover {
+    position: absolute;
+    margin-left: 270px;
+    margin-top: -30px;
+}
+
+.out {
+    position: absolute;
+    margin-left: 1300px;
+    margin-top: 520px;
+}
+
+.back,
+.replay {
+    display: -webkit-box;
+    padding: 8px 30px;
+    font-size: 16px;
+    border-style: none;
+    color: #FFFFFF;
+    background-color: darksalmon;
+    border: 1px #FF6600 solid;
+    line-height: 24px;
+    /*设置鼠标移动到按钮上编变成小手*/
+    cursor: pointer;
+    /*设置按钮的内发光效果*/
+    -webkit-box-shadow: inset 0px 0px 5px #fff;
+    -moz-box-shadow: inset 0px 0px 5px #fff;
+    box-shadow: inset 0px 0px 5px #fff;
+    /*设置按钮为圆角*/
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+select {
+    border: solid 1px #ccc;
+    appearance: none;
+    /*清除select下拉框默认样式*/
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 14px;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    background: url("img/arrow.png") no-repeat scroll right center transparent;
+    /*自定义图片覆盖原有的下三角符号*/
+}
+
+select::-ms-expand {
+    display: none;
+    /*清除IE默认下拉按钮，但是测试发现IE10以上有效，IE8，9默认下拉按钮仍旧存在*/
+}

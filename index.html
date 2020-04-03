@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta charset="UTF-8">
+    <title>拼图游戏</title>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+
+<body style="background-color: cornsilk;">
+    <div class="game">
+        <!-- 游戏开始界面 -->
+        <div class="start">
+            <span class="btn btn-small submit" id="start">开始游戏</span>
+        </div>
+        <div class="gameover">
+            <img src="over.png">
+        </div>
+
+        <div class="main">
+            <h3>拼图游戏</h3>
+            <div id="slider" style="position:absolute; width: 200px; margin-left: 1300px;margin-top: 250px;">
+                <p>
+                    <p>选择难度：</p>
+                    <select id="level">
+                        <option value="2">&nbsp;2*2&nbsp;</option>
+                        <option value="3">&nbsp;3*3&nbsp;</option>
+                        <option value="4">&nbsp;4*4&nbsp;</option>
+                        <option value="5">&nbsp;5*5&nbsp;</option>
+                        <option value="6">&nbsp;6*6&nbsp;</option>
+                        <option value="7">&nbsp;7*7&nbsp;</option>
+                    </select>
+                </p><br>
+            </div>
+            <div class="cankao">
+                <img src="2.png">
+                <br>
+                <br><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    参考图</label>
+            </div>
+
+            <div class="out">
+                <input type="button" class="replay" value="重玩本关">
+                <br>
+                <input type="button" class="back" value="退出游戏">
+
+            </div>
+            <div style="left: 50%; height: 550px;">
+                <canvas id="puzzle" width="550px" height="550px" style="position: absolute;margin-top: 50px;left: 10%;"></canvas>
+            </div>
+        </div>
+
+        <!--进度条容器-->
+        <div id="progressbar">
+            <!--用来模仿进度条推进效果的进度条元素-->
+            <div id="fill"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="load.js"></script>
+    <script src="main.js"></script>
+    <script src="audio.js"></script>
+</body>
+
+</html>
